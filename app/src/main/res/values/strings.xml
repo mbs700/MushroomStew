@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Mushroom Stew</string>
+    <string name="scaleDescriptors">
+        Select the option that corresponds how often you have been bothered by the following over the past two weeks.
+        \n
+        \n0: Not at all
+        \n1: Several days
+        \n2: More than half the days
+        \n3: Nearly every day
+    </string>
+    <string name="questionN">Insert the question here. Insert the question here.</string>
+    <string name="continueButton">Next Question</string>
+    <string name="questionNumber">You are on question m on n.</string>
 </resources>

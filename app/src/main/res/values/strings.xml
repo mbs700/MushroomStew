@@ -9,6 +9,19 @@
         \n3: Nearly every day
     </string>
     <string name="questionN">Insert the question here. Insert the question here.</string>
-    <string name="continueButton">Next Question</string>
-    <string name="questionNumber">You are on question m on n.</string>
+    <string name="continueButton">Next question</string>
+    <string name="resultsButton">Proceed to results</string>
+    <string name="questionNumber1">You are on question 1 on n.</string>
+    <string name="questionNumber2">You are on question 2 on n.</string>
+    <string name="questionNumber3">You are on question 3 on n.</string>
+
+    <string name="welcomeText">Welcome 3</string>
+    <string name="explanatoryText">This seems like a good place to include some explanatory text about the app/surveys.</string>
+    <string name="start">Start</string>
+    <string name="topTitle">You are taking the GAD-7 and PHQ-9 anxiety and depression screener tests.</string>
+
+    <string name="scale">0        1        2        3</string>
+    <string name="please">Oh I hope this page can sum the results</string>
 </resources>
+
+

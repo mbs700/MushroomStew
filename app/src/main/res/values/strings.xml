@@ -11,9 +11,9 @@
     <string name="questionN">Insert the question here. Insert the question here.</string>
     <string name="continueButton">Next question</string>
     <string name="resultsButton">Proceed to results</string>
-    <string name="questionNumber1">You are on question 1 on n.</string>
-    <string name="questionNumber2">You are on question 2 on n.</string>
-    <string name="questionNumber3">You are on question 3 on n.</string>
+    <string name="questionNumber1">You are on question 1 of n.</string>
+    <string name="questionNumber2">You are on question 2 of n.</string>
+    <string name="questionNumber3">You are on question 3 of n.</string>
 
     <string name="welcomeText">Welcome</string>
     <string name="explanatoryText">This seems like a good place to include some explanatory text about the app/surveys.</string>

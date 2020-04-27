@@ -9,12 +9,13 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import static com.example.mushroomstew.Question2Activity.EXTRA_NUMBER2;
+import static com.example.mushroomstew.Question2Activity.EXTRA_GAD2;
+import static com.example.mushroomstew.Question2Activity.EXTRA_PHQ2;
 
 public class Question3Activity extends AppCompatActivity {
-    public static final String EXTRA_NUMBER3  = "com.example.application.mushroomstew.EXTRA_NUMBER3";
+    public static final String EXTRA_GAD3 = EXTRA_GAD2;
+    public static final String EXTRA_PHQ3 = EXTRA_PHQ2;
 
-    private TextView previousSum;
     private SeekBar seekBar;
     private TextView sliderValue;
 
@@ -24,7 +25,6 @@ public class Question3Activity extends AppCompatActivity {
         setContentView(R.layout.activity_question3);
 
 
-        previousSum = findViewById(R.id.previousSum);
         seekBar = findViewById(R.id.seekBar);
         sliderValue = findViewById(R.id.sliderValue);
 
@@ -41,8 +41,8 @@ public class Question3Activity extends AppCompatActivity {
         });
 
         Intent intent = getIntent();
-        int sum = intent.getIntExtra(EXTRA_NUMBER2, -1);
-        previousSum.setText("" + sum);
+        final int[] GAD = intent.getIntArrayExtra(EXTRA_GAD3);
+        final int[] PHQ = intent.getIntArrayExtra(EXTRA_PHQ3);
 
 
 
@@ -51,19 +51,19 @@ public class Question3Activity extends AppCompatActivity {
         resultsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openResultsActivity();
+                openResultsActivity(GAD, PHQ);
             }
         });
     }
 
-    private void openResultsActivity() {
+    private void openResultsActivity(int[] GAD, int[] PHQ) {
         TextView currentValue = findViewById(R.id.sliderValue);
         int newVal = Integer.parseInt(currentValue.getText().toString());
-        int lastSum = Integer.parseInt(previousSum.getText().toString());
-        int newSum = newVal + lastSum;
 
+        GAD[2] = newVal;
         Intent intent = new Intent(this, ResultsActivity.class);
-        intent.putExtra(EXTRA_NUMBER3, newSum);
+        intent.putExtra(EXTRA_GAD3, GAD);
+        intent.putExtra(EXTRA_PHQ3, PHQ);
         startActivity(intent);
     }
 }

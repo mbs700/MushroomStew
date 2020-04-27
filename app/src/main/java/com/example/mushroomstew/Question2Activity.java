@@ -9,13 +9,13 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import static com.example.mushroomstew.Question1Activity.EXTRA_NUMBER;
-//import android.widget.TextView;
+import static com.example.mushroomstew.Question1Activity.EXTRA_GAD;
+import static com.example.mushroomstew.Question1Activity.EXTRA_PHQ;
 
 public class Question2Activity extends AppCompatActivity {
-    public static final String EXTRA_NUMBER2  = "com.example.application.mushroomstew.EXTRA_NUMBER2";
+    public static final String EXTRA_GAD2 = EXTRA_GAD;
+    public static final String EXTRA_PHQ2 = EXTRA_PHQ;
 
-    private TextView previousSum;
     private TextView sliderValue;
     private SeekBar seekBar;
 
@@ -24,7 +24,6 @@ public class Question2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question2);
 
-        previousSum = findViewById(R.id.previousSum);
         sliderValue = findViewById(R.id.sliderValue);
         seekBar = findViewById(R.id.seekBar);
 
@@ -42,27 +41,46 @@ public class Question2Activity extends AppCompatActivity {
 
 
         Intent intent = getIntent();
-        int sum = intent.getIntExtra(EXTRA_NUMBER, 0);
-        previousSum.setText("" + sum);
+        final int[] GAD = intent.getIntArrayExtra(EXTRA_GAD2);
+        final int[] PHQ = intent.getIntArrayExtra(EXTRA_PHQ2);
+        //previousSum.setText("" + sum);
 
         Button continueButton;
         continueButton = findViewById(R.id.continueButton);
         continueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openQ3Activity();
+                openQ3Activity(GAD, PHQ);
             }
         });
+
+        /*Button backButton = findViewById(R.id.backButton);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openQ1Activity();
+            }
+        });*/
     }
 
-    private void openQ3Activity() {
+    private void openQ3Activity(int[] GAD, int[] PHQ) {
         TextView currentValue = findViewById(R.id.sliderValue);
         int newVal = Integer.parseInt(currentValue.getText().toString());
-        int lastSum = Integer.parseInt(previousSum.getText().toString());
-        int newSum = newVal + lastSum;
+
+        GAD[1] = newVal;
 
         Intent intent = new Intent(this, Question3Activity.class);
-        intent.putExtra(EXTRA_NUMBER2, newSum);
+        intent.putExtra(EXTRA_GAD, GAD);
+        intent.putExtra(EXTRA_PHQ, PHQ);
+
         startActivity(intent);
     }
+
+    /*private void openQ1Activity() {
+        int lastSum = Integer.parseInt(previousSum.getText().toString());
+
+        Intent intent = new Intent(this, Question3Activity.class);
+        intent.putExtra(EXTRA_NUMBER2, lastSum);
+        startActivity(intent);
+    }*/
 }

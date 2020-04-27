@@ -9,9 +9,10 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-public class Question1Activity extends AppCompatActivity {
-    public static final String EXTRA_NUMBER = "com.example.application.mushroomstew.EXTRA_NUMBER";
 
+public class Question1Activity extends AppCompatActivity {
+    public static final String EXTRA_GAD = "com.example.application.mushroomstew.EXTRA_GAD";
+    public static final String EXTRA_PHQ = "com.example.application.mushroomstew.EXTRA_PHQ";
 
     private TextView sliderValue;
 
@@ -48,16 +49,33 @@ public class Question1Activity extends AppCompatActivity {
                 openQ2Activity();
             }
         });
+
+        Button backButton = findViewById(R.id.backButton);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                takeMeHome();
+            }
+        });
     }
 
     private void openQ2Activity() {
         TextView currentValue = findViewById(R.id.sliderValue);
         int newVal = Integer.parseInt(currentValue.getText().toString());
-        int startingSum = 0;
-        int newSum = startingSum + newVal;
+
+        int[] GAD = new int[7];
+        int[] PHQ = new int[9];
+        GAD[0] = newVal;
 
         Intent intent = new Intent(this, Question2Activity.class);
-        intent.putExtra(EXTRA_NUMBER, newSum);
+        intent.putExtra(EXTRA_GAD, GAD);
+        intent.putExtra(EXTRA_PHQ, PHQ);
+
+        startActivity(intent);
+    }
+
+    private void takeMeHome() {
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 }

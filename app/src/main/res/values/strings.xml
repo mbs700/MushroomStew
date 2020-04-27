@@ -8,12 +8,27 @@
         \n2: More than half the days
         \n3: Nearly every day
     </string>
-    <string name="questionN">Insert the question here. Insert the question here.</string>
+    <string name="questionG1">Feeling nervous, anxious, or on edge.</string>
+    <string name="questionG2">Not being able to stop or control worrying.</string>
+    <string name="questionG3">Worrying too much about different things.</string>
+    <string name="questionG4">Trouble relaxing.</string>
+    <string name="questionG5">Being so restless that it\'s hard to sit still.</string>
+    <string name="questionG6">Becoming easily annoyed or irritable.</string>
+    <string name="questionG7">Feeling afraid as if something awful might happen.</string>
+    <string name="questionP1">Little interest or pleasure in doing things.</string>
+    <string name="questionP2">Feeling down, depressed, or hopeless.</string>
+    <string name="questionP3">Trouble falling or staying asleep, or sleeping too much.</string>
+    <string name="questionP4">Feeling tired or having little energy.</string>
+    <string name="questionP5">Poor appetite or overeating.</string>
+    <string name="questionP6">Feeling bad about yourself - or that you are a failure or have let yourself or your family down.</string>
+    <string name="questionP7">Trouble concentrating on things, such as reading the newspaper or watching television.</string>
+    <string name="questionP8">Moving or speaking so slowly that other people could have noticed. Or so fidgety or restless that you have been moving a lot more than usual.</string>
+    <string name="questionP9">Thoughts that you would be better off dead, or thoughts of hurting yourself in some way.</string>
     <string name="continueButton">Next question</string>
     <string name="resultsButton">Proceed to results</string>
-    <string name="questionNumber1">You are on question 1 of n.</string>
-    <string name="questionNumber2">You are on question 2 of n.</string>
-    <string name="questionNumber3">You are on question 3 of n.</string>
+    <string name="questionNumber1">You are on question 1 of 16.</string>
+    <string name="questionNumber2">You are on question 2 of 16.</string>
+    <string name="questionNumber3">You are on question 3 of 16.</string>
 
     <string name="welcomeText">Welcome</string>
     <string name="explanatoryText">This seems like a good place to include some explanatory text about the app/surveys.</string>
@@ -26,6 +41,7 @@
     <string name="previousSum">placeholder for\nprevious sum</string>
     <string name="finalSumTitle">Final sum (plz be right):</string>
     <string name="mainScreen">Main Screen</string>
+    <string name="back">BACK</string>
 </resources>
 
 

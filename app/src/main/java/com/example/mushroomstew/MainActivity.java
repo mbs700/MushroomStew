@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
      * this funk, surprisingly, opens Question1Activity
      */
     public void openQ1Activity() {
-        Intent intent = new Intent(this, Question1Activity.class);
+        Intent intent = new Intent(this, Question1GActivity.class);
         startActivity(intent);
     }
 }

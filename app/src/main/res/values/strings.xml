@@ -26,9 +26,25 @@
     <string name="questionP9">Thoughts that you would be better off dead, or thoughts of hurting yourself in some way.</string>
     <string name="continueButton">Next question</string>
     <string name="resultsButton">Proceed to results</string>
+
     <string name="questionNumber1">You are on question 1 of 16.</string>
     <string name="questionNumber2">You are on question 2 of 16.</string>
     <string name="questionNumber3">You are on question 3 of 16.</string>
+    <string name="questionNumber4">You are on question 4 of 16.</string>
+    <string name="questionNumber5">You are on question 5 of 16.</string>
+    <string name="questionNumber6">You are on question 6 of 16.</string>
+    <string name="questionNumber7">You are on question 7 of 16.</string>
+
+    <string name="questionNumber8">You are on question 8 of 16.</string>
+    <string name="questionNumber9">You are on question 9 of 16.</string>
+    <string name="questionNumber10">You are on question 10 of 16.</string>
+    <string name="questionNumber11">You are on question 11 of 16.</string>
+    <string name="questionNumber12">You are on question 12 of 16.</string>
+    <string name="questionNumber13">You are on question 13 of 16.</string>
+    <string name="questionNumber14">You are on question 14 of 16.</string>
+    <string name="questionNumber15">You are on question 15 of 16.</string>
+    <string name="questionNumber16">You are on question 16 of 16.</string>
+
 
     <string name="welcomeText">Welcome</string>
     <string name="explanatoryText">This seems like a good place to include some explanatory text about the app/surveys.</string>

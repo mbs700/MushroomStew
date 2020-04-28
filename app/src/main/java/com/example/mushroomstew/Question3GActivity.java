@@ -1,7 +1,5 @@
 package com.example.mushroomstew;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,12 +7,14 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import static com.example.mushroomstew.Question1Activity.EXTRA_GAD;
-import static com.example.mushroomstew.Question1Activity.EXTRA_PHQ;
+import androidx.appcompat.app.AppCompatActivity;
 
-public class Question2Activity extends AppCompatActivity {
-    public static final String EXTRA_GAD2 = EXTRA_GAD;
-    public static final String EXTRA_PHQ2 = EXTRA_PHQ;
+import static com.example.mushroomstew.Question2GActivity.EXTRA_GAD2;
+import static com.example.mushroomstew.Question2GActivity.EXTRA_PHQ2;
+
+public class Question3GActivity extends AppCompatActivity {
+    public static final String EXTRA_GAD3 = EXTRA_GAD2;
+    public static final String EXTRA_PHQ3 = EXTRA_PHQ2;
 
     private TextView sliderValue;
     private SeekBar seekBar;
@@ -22,7 +22,7 @@ public class Question2Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_question2);
+        setContentView(R.layout.activity_question3g);
 
         sliderValue = findViewById(R.id.sliderValue);
         seekBar = findViewById(R.id.seekBar);
@@ -41,8 +41,8 @@ public class Question2Activity extends AppCompatActivity {
 
 
         Intent intent = getIntent();
-        final int[] GAD = intent.getIntArrayExtra(EXTRA_GAD2);
-        final int[] PHQ = intent.getIntArrayExtra(EXTRA_PHQ2);
+        final int[] GAD = intent.getIntArrayExtra(EXTRA_GAD3);
+        final int[] PHQ = intent.getIntArrayExtra(EXTRA_PHQ3);
         //previousSum.setText("" + sum);
 
         Button continueButton;
@@ -50,7 +50,7 @@ public class Question2Activity extends AppCompatActivity {
         continueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openQ3Activity(GAD, PHQ);
+                openQ4Activity(GAD, PHQ);
             }
         });
 
@@ -63,15 +63,15 @@ public class Question2Activity extends AppCompatActivity {
         });*/
     }
 
-    private void openQ3Activity(int[] GAD, int[] PHQ) {
+    private void openQ4Activity(int[] GAD, int[] PHQ) {
         TextView currentValue = findViewById(R.id.sliderValue);
         int newVal = Integer.parseInt(currentValue.getText().toString());
 
-        GAD[1] = newVal;
+        GAD[2] = newVal;
 
-        Intent intent = new Intent(this, Question3Activity.class);
-        intent.putExtra(EXTRA_GAD, GAD);
-        intent.putExtra(EXTRA_PHQ, PHQ);
+        Intent intent = new Intent(this, Question4GActivity.class);
+        intent.putExtra(EXTRA_GAD3, GAD);
+        intent.putExtra(EXTRA_PHQ3, PHQ);
 
         startActivity(intent);
     }

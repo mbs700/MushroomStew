@@ -1,7 +1,5 @@
 package com.example.mushroomstew;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,29 +7,29 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
 
-public class Question1Activity extends AppCompatActivity {
-    public static final String EXTRA_GAD = "com.example.application.mushroomstew.EXTRA_GAD";
-    public static final String EXTRA_PHQ = "com.example.application.mushroomstew.EXTRA_PHQ";
+import static com.example.mushroomstew.Question3GActivity.EXTRA_GAD3;
+import static com.example.mushroomstew.Question3GActivity.EXTRA_PHQ3;
+
+public class Question4GActivity extends AppCompatActivity {
+    public static final String EXTRA_GAD4 = EXTRA_GAD3;
+    public static final String EXTRA_PHQ4 = EXTRA_PHQ3;
 
     private TextView sliderValue;
-
-
+    private SeekBar seekBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_question1);
+        setContentView(R.layout.activity_question4g);
 
-
-        SeekBar seekBar = findViewById(R.id.seekBar);
         sliderValue = findViewById(R.id.sliderValue);
+        seekBar = findViewById(R.id.seekBar);
+
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                // ik it doesn't like what i did with the quotes. I can tell you that the solution
-                // is NOT just to delete them. Then the app crashes every time to seek bar is moved
-                // sliderValue.setText(String.format("%02d", progress)); also works but isn't liked
                 sliderValue.setText("" + progress);
             }
 
@@ -41,41 +39,48 @@ public class Question1Activity extends AppCompatActivity {
             public void onStopTrackingTouch(SeekBar seekBar) { }
         });
 
+
+        Intent intent = getIntent();
+        final int[] GAD = intent.getIntArrayExtra(EXTRA_GAD4);
+        final int[] PHQ = intent.getIntArrayExtra(EXTRA_PHQ4);
+        //previousSum.setText("" + sum);
+
         Button continueButton;
         continueButton = findViewById(R.id.continueButton);
         continueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openQ2Activity();
+                openQ5Activity(GAD, PHQ);
             }
         });
 
-        Button backButton = findViewById(R.id.backButton);
+        /*Button backButton = findViewById(R.id.backButton);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                takeMeHome();
+                openQ1Activity();
             }
-        });
+        });*/
     }
 
-    private void openQ2Activity() {
+    private void openQ5Activity(int[] GAD, int[] PHQ) {
         TextView currentValue = findViewById(R.id.sliderValue);
         int newVal = Integer.parseInt(currentValue.getText().toString());
 
-        int[] GAD = new int[7];
-        int[] PHQ = new int[9];
-        GAD[0] = newVal;
+        GAD[3] = newVal;
 
-        Intent intent = new Intent(this, Question2Activity.class);
-        intent.putExtra(EXTRA_GAD, GAD);
-        intent.putExtra(EXTRA_PHQ, PHQ);
+        Intent intent = new Intent(this, Question5GActivity.class);
+        intent.putExtra(EXTRA_GAD4, GAD);
+        intent.putExtra(EXTRA_PHQ4, PHQ);
 
         startActivity(intent);
     }
 
-    private void takeMeHome() {
-        Intent intent = new Intent(this, MainActivity.class);
+    /*private void openQ1Activity() {
+        int lastSum = Integer.parseInt(previousSum.getText().toString());
+
+        Intent intent = new Intent(this, Question3Activity.class);
+        intent.putExtra(EXTRA_NUMBER2, lastSum);
         startActivity(intent);
-    }
+    }*/
 }

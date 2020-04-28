@@ -9,10 +9,10 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import static com.example.mushroomstew.Question2Activity.EXTRA_GAD2;
-import static com.example.mushroomstew.Question2Activity.EXTRA_PHQ2;
+import static com.example.mushroomstew.Question2GActivity.EXTRA_GAD2;
+import static com.example.mushroomstew.Question2GActivity.EXTRA_PHQ2;
 
-public class Question3Activity extends AppCompatActivity {
+public class Question9PActivity extends AppCompatActivity {
     public static final String EXTRA_GAD3 = EXTRA_GAD2;
     public static final String EXTRA_PHQ3 = EXTRA_PHQ2;
 
@@ -22,7 +22,7 @@ public class Question3Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_question3);
+        setContentView(R.layout.activity_question9p);
 
 
         seekBar = findViewById(R.id.seekBar);
@@ -60,10 +60,12 @@ public class Question3Activity extends AppCompatActivity {
         TextView currentValue = findViewById(R.id.sliderValue);
         int newVal = Integer.parseInt(currentValue.getText().toString());
 
-        GAD[2] = newVal;
+        PHQ[8] = newVal;
+
         Intent intent = new Intent(this, ResultsActivity.class);
         intent.putExtra(EXTRA_GAD3, GAD);
         intent.putExtra(EXTRA_PHQ3, PHQ);
+
         startActivity(intent);
     }
 }

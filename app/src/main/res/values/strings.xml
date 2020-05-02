@@ -8,11 +8,11 @@
         \n2: More than half the days
         \n3: Nearly every day
     </string>
-    <string name="questionG1">Feeling nervous, anxious, or on edge.</string>
-    <string name="questionG2">Not being able to stop or control worrying.</string>
-    <string name="questionG3">Worrying too much about different things.</string>
-    <string name="questionG4">Trouble relaxing.</string>
-    <string name="questionG5">Being so restless that it\'s hard to sit still.</string>
+    <string name="questionG1">In the past two weeks, how often did you feel nervous, anxious, or on edge?</string>
+    <string name="questionG2">In the past two weeks, how were you not able to stop or control worrying?</string>
+    <string name="questionG3">In the past two weeks, how were you worrying too much about different things?</string>
+    <string name="questionG4">In the past two weeks, how often did you have trouble relaxing?</string>
+    <string name="questionG5">In the past two weeks, how were you so restless that it\'s hard to sit still?</string>
     <string name="questionG6">Becoming easily annoyed or irritable.</string>
     <string name="questionG7">Feeling afraid as if something awful might happen.</string>
     <string name="questionP1">Little interest or pleasure in doing things.</string>
@@ -53,7 +53,7 @@
 
     <string name="scale">0        1        2        3</string>
     <string name="please">Oh I hope this page can sum the results</string>
-    <string name="currentSelectionBlank">0</string>
+    <string name="currentSelectionBlank">       0 \nnot at all</string>
     <string name="previousSum">placeholder for\nprevious sum</string>
     <string name="finalSumTitle">Final sum (plz be right):</string>
     <string name="mainScreen">Main Screen</string>

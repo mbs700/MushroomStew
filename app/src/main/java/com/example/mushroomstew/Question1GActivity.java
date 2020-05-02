@@ -15,7 +15,7 @@ public class Question1GActivity extends AppCompatActivity {
     public static final String EXTRA_PHQ = "com.example.application.mushroomstew.EXTRA_PHQ";
 
     private TextView sliderValue;
-
+    private TextView scoreWords;
 
 
     @Override
@@ -26,12 +26,19 @@ public class Question1GActivity extends AppCompatActivity {
 
         SeekBar seekBar = findViewById(R.id.seekBar);
         sliderValue = findViewById(R.id.sliderValue);
+        scoreWords = findViewById(R.id.wordScore);
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                // ik it doesn't like what i did with the quotes. I can tell you that the solution
-                // is NOT just to delete them. Then the app crashes every time to seek bar is moved
-                // sliderValue.setText(String.format("%02d", progress)); also works but isn't liked
+                if (progress == 0) {
+                    scoreWords.setText("Not at all.");
+                } else if (progress == 1) {
+                   scoreWords.setText("Several days.");
+                } else if (progress == 2) {
+                    scoreWords.setText("More than half the days.");
+                } else if (progress == 3) {
+                    scoreWords.setText("Nearly every day.");
+                }
                 sliderValue.setText("" + progress);
             }
 

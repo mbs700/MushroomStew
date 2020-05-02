@@ -18,6 +18,7 @@ public class Question9PActivity extends AppCompatActivity {
 
     private SeekBar seekBar;
     private TextView sliderValue;
+    private TextView scoreWords;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,12 +26,22 @@ public class Question9PActivity extends AppCompatActivity {
         setContentView(R.layout.activity_question9p);
 
 
-        seekBar = findViewById(R.id.seekBar);
         sliderValue = findViewById(R.id.sliderValue);
+        seekBar = findViewById(R.id.seekBar);
+        scoreWords = findViewById(R.id.wordScore);
 
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                if (progress == 0) {
+                    scoreWords.setText("Not at all.");
+                } else if (progress == 1) {
+                    scoreWords.setText("Several days.");
+                } else if (progress == 2) {
+                    scoreWords.setText("More than half the days.");
+                } else if (progress == 3) {
+                    scoreWords.setText("Nearly every day.");
+                }
                 sliderValue.setText("" + progress);
             }
 
@@ -59,7 +70,6 @@ public class Question9PActivity extends AppCompatActivity {
     private void openResultsActivity(int[] GAD, int[] PHQ) {
         TextView currentValue = findViewById(R.id.sliderValue);
         int newVal = Integer.parseInt(currentValue.getText().toString());
-
         PHQ[8] = newVal;
 
         Intent intent = new Intent(this, ResultsActivity.class);

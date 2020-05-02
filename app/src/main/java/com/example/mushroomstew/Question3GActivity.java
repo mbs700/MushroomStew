@@ -17,6 +17,7 @@ public class Question3GActivity extends AppCompatActivity {
     public static final String EXTRA_PHQ3 = EXTRA_PHQ2;
 
     private TextView sliderValue;
+    private TextView scoreWords;
     private SeekBar seekBar;
 
     @Override
@@ -26,10 +27,20 @@ public class Question3GActivity extends AppCompatActivity {
 
         sliderValue = findViewById(R.id.sliderValue);
         seekBar = findViewById(R.id.seekBar);
+        scoreWords = findViewById(R.id.wordScore);
 
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                if (progress == 0) {
+                    scoreWords.setText("Not at all.");
+                } else if (progress == 1) {
+                    scoreWords.setText("Several days.");
+                } else if (progress == 2) {
+                    scoreWords.setText("More than half the days.");
+                } else if (progress == 3) {
+                    scoreWords.setText("Nearly every day.");
+                }
                 sliderValue.setText("" + progress);
             }
 
@@ -66,7 +77,6 @@ public class Question3GActivity extends AppCompatActivity {
     private void openQ4Activity(int[] GAD, int[] PHQ) {
         TextView currentValue = findViewById(R.id.sliderValue);
         int newVal = Integer.parseInt(currentValue.getText().toString());
-
         GAD[2] = newVal;
 
         Intent intent = new Intent(this, Question4GActivity.class);

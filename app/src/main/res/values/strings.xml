@@ -1,31 +1,29 @@
 <resources>
     <string name="app_name">Mushroom Stew</string>
-    <string name="scaleDescriptors">
-        Select the option that corresponds how often you have been bothered by the following over the past two weeks.
-        \n
-        \n0: Not at all
-        \n1: Several days
-        \n2: More than half the days
-        \n3: Nearly every day
-    </string>
+    <string name="scaleDescriptors">Select the option that corresponds how often you have been bothered by the following over the past two weeks.</string>
+
     <string name="questionG1">In the past two weeks, how often did you feel nervous, anxious, or on edge?</string>
     <string name="questionG2">In the past two weeks, how were you not able to stop or control worrying?</string>
     <string name="questionG3">In the past two weeks, how were you worrying too much about different things?</string>
     <string name="questionG4">In the past two weeks, how often did you have trouble relaxing?</string>
-    <string name="questionG5">In the past two weeks, how were you so restless that it\'s hard to sit still?</string>
-    <string name="questionG6">Becoming easily annoyed or irritable.</string>
-    <string name="questionG7">Feeling afraid as if something awful might happen.</string>
-    <string name="questionP1">Little interest or pleasure in doing things.</string>
-    <string name="questionP2">Feeling down, depressed, or hopeless.</string>
-    <string name="questionP3">Trouble falling or staying asleep, or sleeping too much.</string>
-    <string name="questionP4">Feeling tired or having little energy.</string>
-    <string name="questionP5">Poor appetite or overeating.</string>
-    <string name="questionP6">Feeling bad about yourself - or that you are a failure or have let yourself or your family down.</string>
-    <string name="questionP7">Trouble concentrating on things, such as reading the newspaper or watching television.</string>
-    <string name="questionP8">Moving or speaking so slowly that other people could have noticed. Or so fidgety or restless that you have been moving a lot more than usual.</string>
-    <string name="questionP9">Thoughts that you would be better off dead, or thoughts of hurting yourself in some way.</string>
+    <string name="questionG5">In the past two weeks, how were you so restless that it was hard to sit still?</string>
+    <string name="questionG6">In the past two weeks, how often were you becoming easily annoyed or irritable?</string>
+    <string name="questionG7">In the past two weeks, how often were you feeling afraid as if something awful might happen?</string>
+
+    <string name="questionP1">In the past two weeks, how often did you feel little interest or pleasure in doing things?</string>
+    <string name="questionP2">In the past two weeks, how often were you feeling down, depressed, or hopeless?</string>
+    <string name="questionP3">In the past two weeks, how often did you have trouble falling or staying asleep, or sleeping too much?</string>
+    <string name="questionP4">In the past two weeks, how often were you feeling tired or having little energy?</string>
+    <string name="questionP5">In the past two weeks, how often did you have poor appetite or overeating?</string>
+    <string name="questionP6">In the past two weeks, how often were you feeling bad about yourself - or that you are a failure or have let yourself or your family down?</string>
+    <string name="questionP7">In the past two weeks, how often did you have trouble concentrating on things, such as reading the newspaper or watching television?</string>
+    <string name="questionP8">In the past two weeks, how often were you moving or speaking so slowly that other people could have noticed? Or so fidgety or restless that you have been moving a lot more than usual?</string>
+    <string name="questionP9">In the past two weeks, how often have you had thoughts that you would be better off dead, or thoughts of hurting yourself in some way?</string>
+
     <string name="continueButton">Next question</string>
     <string name="resultsButton">Proceed to results</string>
+    <string name="back">BACK</string>
+
 
     <string name="questionNumber1">You are on question 1 of 16.</string>
     <string name="questionNumber2">You are on question 2 of 16.</string>
@@ -45,19 +43,17 @@
     <string name="questionNumber15">You are on question 15 of 16.</string>
     <string name="questionNumber16">You are on question 16 of 16.</string>
 
-
     <string name="welcomeText">Welcome</string>
     <string name="explanatoryText">This seems like a good place to include some explanatory text about the app/surveys.</string>
     <string name="start">Start</string>
     <string name="topTitle">You are taking the GAD-7 and PHQ-9 anxiety and depression screener tests.</string>
 
-    <string name="scale">0        1        2        3</string>
     <string name="please">Oh I hope this page can sum the results</string>
-    <string name="currentSelectionBlank">       0 \nnot at all</string>
+    <string name="currentSelectionBlank">0</string>
+    <string name="defaulttext">Not at all.</string>
     <string name="previousSum">placeholder for\nprevious sum</string>
     <string name="finalSumTitle">Final sum (plz be right):</string>
     <string name="mainScreen">Main Screen</string>
-    <string name="back">BACK</string>
 </resources>
 
 

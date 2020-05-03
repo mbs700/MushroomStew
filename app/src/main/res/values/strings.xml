@@ -44,11 +44,13 @@
     <string name="questionNumber16">You are on question 16 of 16.</string>
 
     <string name="welcomeText">Welcome</string>
-    <string name="explanatoryText">This seems like a good place to include some explanatory text about the app/surveys.</string>
+    <string name="explanatoryText">
+        The GAD7 and the PHQ9 are screening tests for anxiety and depression. The results of this survey are not a diagnosis. Please talk to a healthcare provider for more information.
+    </string>
     <string name="start">Start</string>
     <string name="topTitle">You are taking the GAD-7 and PHQ-9 anxiety and depression screener tests.</string>
 
-    <string name="please">Oh I hope this page can sum the results</string>
+    <string name="please">Results</string>
     <string name="currentSelectionBlank">0</string>
     <string name="defaulttext">Not at all.</string>
     <string name="previousSum">placeholder for\nprevious sum</string>

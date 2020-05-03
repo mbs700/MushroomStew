@@ -19,7 +19,9 @@ public class ResultsActivity extends AppCompatActivity {
     public static final String EXTRA_PHQR = EXTRA_PHQ3;
 
     private TextView scoreGAD;
+    private TextView GADresult;
     private TextView scorePHQ;
+    private TextView PHQresult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,8 @@ public class ResultsActivity extends AppCompatActivity {
 
         scoreGAD = findViewById(R.id.finalSumGAD);
         scorePHQ = findViewById(R.id.finalSumPHQ);
+        GADresult = findViewById(R.id.GADresult);
+        PHQresult = findViewById(R.id.PHQresult);
 
 
         Intent intent = getIntent();
@@ -38,9 +42,33 @@ public class ResultsActivity extends AppCompatActivity {
         for (int num : GAD) {
             sumGAD += num;
         }
+
+        if (sumGAD < 5) {
+            GADresult.setText("No anxiety disorder.");
+        } else if (sumGAD < 9) {
+            GADresult.setText("Mild anxiety disorder.");
+        } else if (sumGAD < 14) {
+            GADresult.setText("Moderate anxiety disorder.");
+        } else {
+            GADresult.setText("Severe anxiety disorder");
+        }
+
+        if (sumPHQ < 5) {
+            PHQresult.setText("Depression severity: minimal or none.");
+        } else if (sumPHQ < 10) {
+            PHQresult.setText("Depression severity: mild.");
+        } else if (sumPHQ < 15) {
+            PHQresult.setText("Depression severity: moderate.");
+        } else if (sumPHQ < 20) {
+            PHQresult.setText("Depression severity: moderately severe.");
+        }else {
+            PHQresult.setText("Depression severity: severe.");
+        }
+
         for (int num : PHQ) {
             sumPHQ += num;
         }
+
 
         scoreGAD.setText("" + sumGAD);
         scorePHQ.setText("" + sumPHQ);

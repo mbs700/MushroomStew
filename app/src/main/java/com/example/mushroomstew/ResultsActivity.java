@@ -70,7 +70,7 @@ public class ResultsActivity extends AppCompatActivity {
         }
 
 
-        scoreGAD.setText("" + sumGAD);
+        scoreGAD.setText("The patient scored " + sumGAD + " out of 21, indicating:");
         scorePHQ.setText("" + sumPHQ);
 
         Button mainScreen = findViewById(R.id.mainScreen);

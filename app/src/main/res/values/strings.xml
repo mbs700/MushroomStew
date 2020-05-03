@@ -3,10 +3,10 @@
     <string name="scaleDescriptors">Select the option that corresponds how often you have been bothered by the following over the past two weeks.</string>
 
     <string name="questionG1">In the past two weeks, how often did you feel nervous, anxious, or on edge?</string>
-    <string name="questionG2">In the past two weeks, how were you not able to stop or control worrying?</string>
-    <string name="questionG3">In the past two weeks, how were you worrying too much about different things?</string>
+    <string name="questionG2">In the past two weeks, how often were you not able to stop or control worrying?</string>
+    <string name="questionG3">In the past two weeks, how often were you worrying too much about different things?</string>
     <string name="questionG4">In the past two weeks, how often did you have trouble relaxing?</string>
-    <string name="questionG5">In the past two weeks, how were you so restless that it was hard to sit still?</string>
+    <string name="questionG5">In the past two weeks, how often were you so restless that it was hard to sit still?</string>
     <string name="questionG6">In the past two weeks, how often were you becoming easily annoyed or irritable?</string>
     <string name="questionG7">In the past two weeks, how often were you feeling afraid as if something awful might happen?</string>
 
@@ -50,12 +50,14 @@
     <string name="start">Start</string>
     <string name="topTitle">You are taking the GAD-7 and PHQ-9 anxiety and depression screener tests.</string>
 
-    <string name="please">Results</string>
+    <string name="gadResultsTitle"><u><b>GAD-7 Anxiety Results</b></u></string>
     <string name="currentSelectionBlank">0</string>
     <string name="defaulttext">Not at all.</string>
     <string name="previousSum">placeholder for\nprevious sum</string>
     <string name="finalSumTitle">Final sum (plz be right):</string>
     <string name="mainScreen">Main Screen</string>
+    <string name="blankNumber">This is filler text for sentence about this long.</string>
+    <string name="anxietyResultPlaceholder">This level of anxiety.</string>
 </resources>
 
 

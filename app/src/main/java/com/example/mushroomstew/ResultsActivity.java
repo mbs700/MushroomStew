@@ -71,7 +71,7 @@ public class ResultsActivity extends AppCompatActivity {
 
 
         scoreGAD.setText("The patient scored " + sumGAD + " out of 21, indicating:");
-        scorePHQ.setText("" + sumPHQ);
+        scorePHQ.setText("The patient scored " + sumPHQ + " out of 27, indicating:");
 
         Button mainScreen = findViewById(R.id.mainScreen);
         mainScreen.setOnClickListener(new View.OnClickListener() {

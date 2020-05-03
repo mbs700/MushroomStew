@@ -9,39 +9,56 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ResultsActivity"></activity>
-        <activity android:name=".Question9PActivity"
-            android:parentActivityName=".Question8PActivity"/>
-        <activity android:name=".Question8PActivity"
-            android:parentActivityName=".Question7PActivity"/>
-        <activity android:name=".Question7PActivity"
-            android:parentActivityName=".Question6PActivity"/>
-        <activity android:name=".Question6PActivity"
-            android:parentActivityName=".Question5PActivity"/>
-        <activity android:name=".Question5PActivity"
-            android:parentActivityName=".Question4PActivity"/>
-        <activity android:name=".Question4PActivity"
-            android:parentActivityName=".Question3PActivity"/>
-        <activity android:name=".Question3PActivity"
-            android:parentActivityName=".Question2PActivity"/>
-        <activity android:name=".Question2PActivity"
-            android:parentActivityName=".Question1PActivity"/>
-        <activity android:name=".Question1PActivity"
-            android:parentActivityName=".Question7GActivity"/>
-        <activity android:name=".Question7GActivity"
-            android:parentActivityName=".Question6GActivity"/>
-        <activity android:name=".Question6GActivity"
-            android:parentActivityName=".Question5GActivity"/>
-        <activity android:name=".Question5GActivity"
-            android:parentActivityName=".Question4GActivity"/>
-        <activity android:name=".Question4GActivity"
-            android:parentActivityName=".Question3GActivity"/>
-        <activity android:name=".Question3GActivity"
-            android:parentActivityName=".Question2GActivity"/>
-        <activity android:name=".Question2GActivity"
-            android:parentActivityName=".Question1GActivity"/>
-        <activity android:name=".Question1GActivity"
-            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".PreviousResultsActivity"></activity>
+        <activity android:name=".ResultsActivity" />
+        <activity
+            android:name=".Question9PActivity"
+            android:parentActivityName=".Question8PActivity" />
+        <activity
+            android:name=".Question8PActivity"
+            android:parentActivityName=".Question7PActivity" />
+        <activity
+            android:name=".Question7PActivity"
+            android:parentActivityName=".Question6PActivity" />
+        <activity
+            android:name=".Question6PActivity"
+            android:parentActivityName=".Question5PActivity" />
+        <activity
+            android:name=".Question5PActivity"
+            android:parentActivityName=".Question4PActivity" />
+        <activity
+            android:name=".Question4PActivity"
+            android:parentActivityName=".Question3PActivity" />
+        <activity
+            android:name=".Question3PActivity"
+            android:parentActivityName=".Question2PActivity" />
+        <activity
+            android:name=".Question2PActivity"
+            android:parentActivityName=".Question1PActivity" />
+        <activity
+            android:name=".Question1PActivity"
+            android:parentActivityName=".Question7GActivity" />
+        <activity
+            android:name=".Question7GActivity"
+            android:parentActivityName=".Question6GActivity" />
+        <activity
+            android:name=".Question6GActivity"
+            android:parentActivityName=".Question5GActivity" />
+        <activity
+            android:name=".Question5GActivity"
+            android:parentActivityName=".Question4GActivity" />
+        <activity
+            android:name=".Question4GActivity"
+            android:parentActivityName=".Question3GActivity" />
+        <activity
+            android:name=".Question3GActivity"
+            android:parentActivityName=".Question2GActivity" />
+        <activity
+            android:name=".Question2GActivity"
+            android:parentActivityName=".Question1GActivity" />
+        <activity
+            android:name=".Question1GActivity"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

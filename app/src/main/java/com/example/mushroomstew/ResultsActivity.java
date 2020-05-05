@@ -53,6 +53,11 @@ public class ResultsActivity extends AppCompatActivity {
             GADresult.setText("Severe anxiety disorder");
         }
 
+        for (int num : PHQ) {
+            sumPHQ += num;
+        }
+
+
         if (sumPHQ < 5) {
             PHQresult.setText("Depression severity: minimal or none.");
         } else if (sumPHQ < 10) {
@@ -65,9 +70,7 @@ public class ResultsActivity extends AppCompatActivity {
             PHQresult.setText("Depression severity: severe.");
         }
 
-        for (int num : PHQ) {
-            sumPHQ += num;
-        }
+
 
 
         scoreGAD.setText("The patient scored " + sumGAD + " out of 21, indicating:");
